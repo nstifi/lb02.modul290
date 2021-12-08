@@ -83,19 +83,26 @@ function checkLength(input, min, max) {
     im Internet nach "javascript regular expression for mobile number".
 */
 //--Begin
-function checkPhone(inputtxt) {
-  var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  if((inputtxt.value.match(phoneno)))
-  {
-    return true;
+function checkPhone(id, input) {
+  //Default: is valid
+  let result = {
+    isNotValid: false,
+    msg: showSuccess(id)
   }
-  else
-  {
-    alert("message");
-    return false;
+  const re = /^\+?([0-9]{2})\)?[-. ]?([0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if (!re.test(input.trim())) {
+    result = {
+      isNotValid: true,
+      msg: showError(id, 'Mobile is not valid')
+    }
+  } else {
+    showError(input,
+        `${getFieldName(input)} isn't valid`
+    );
+    ALL_INPUT_VALID = false;
+    return result;
   }
 }
-//--End
 
 
 /**
@@ -190,4 +197,4 @@ form.addEventListener('submit', function(e) {
     console.log("At least one validation failed. No data sent to contact-server.")
   }
 
-});
+})
