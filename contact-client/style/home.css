@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* CSS Variables
+   https://www.w3schools.com/css/css3_variables.asp
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+nav {
+    margin-top: 0px;
+    position: fixed;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    background-color: none;
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #88C9F2;
+    transition: 0.3s;
+}
+
+.active {
+    color: #369AD9;
+
+}
+
+.active:hover {
+    color:  #369AD9;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+main {
+    width: 70%;
+    margin-left: 15%;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
