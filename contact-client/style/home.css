@@ -6,17 +6,19 @@
 
 * {
     box-sizing: border-box;
+    text-decoration: none;
 }
-
-
+body{
+    background-color: #efeeee;
+}
+/*------------------------------ Navigation --------------------------- */
 nav {
-    margin-top: 0px;
     position: fixed;
     display: block;
-    width: 100%;
     justify-content: center;
-    background-color: none;
     z-index: 1;
+    width: 70%;
+    margin-left: 15%;
 }
 
 ul {
@@ -27,39 +29,45 @@ ul {
     display: flex;
     justify-content: center;
     font-family: 'Open Sans', sans-serif;
+    background-color:    #e5e4e4;;
+
 }
 
 li {
     float: left;
+    background-color: #e5e4e4;
 }
 
 li a{
     display: block;
-    color: black;
+    color: #A6A6A6;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: #e5e4e4;
 }
 
 li a:hover {
-    color: #88C9F2;
+    color: #404040;
     transition: 0.3s;
 }
 
 .active {
-    color: #369AD9;
+    color: #404040;
 
 }
 
 .active:hover {
-    color:  #369AD9;
-    color: black;
+    color:  black;
+    transition: 0.3s;
 }
 
+/*------------------------------ Main ------------------------------ */
 h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+
 }
 
 main {
@@ -69,5 +77,76 @@ main {
 
 p {
     font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #1f1f1f;
+    text-underline: none;
+}
+.big {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100px;
+}
+.button_down{
+    text-underline: none;
+}
+
+.button_downp{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    text-underline: none;
+
+}
+
+p .button_entry{
+    text-underline: none;
+}
+
+#formular{
+    text-underline: none;
+    text-align: center;
+
+}
+
+.entry{
+    width: 5%;
+    margin-left: 47.5%;
+    background-color: #e5e4e4;
+    color:#A6A6A6 ;
+}
+.entry:hover{
+    color: #404040;
+    transition: 0.3s;
+}
+
+img{
+    width: 600px;
+    height: auto;
+    float: left;
+    margin-right: 50px;
+}
+
+
+.imgtext{
+    margin-left: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80px;
+}
+/*------------------------------ footer------------------------------ */
+
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    position: fixed;
+}
+
+footer p {
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
+    text-decoration: none;
+    color: #A6A6A6;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
