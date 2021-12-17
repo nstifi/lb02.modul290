@@ -16,23 +16,23 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Create admin and set password
-drop user if exists 'adminContactDB'@'localhost';
-create user 'adminContactDB'@'localhost' identified WITH mysql_native_password by 'hello';
+drop user if exists 'admin1'@'localhost';
+create user 'admin1'@'localhost' identified WITH mysql_native_password by 'hello';
 -- drop & create database
-drop database if exists `contactdb`;
-CREATE DATABASE `contactdb` /*!40100 DEFAULT CHARACTER SET utf8mb4
+drop database if exists `DiaryDB`;
+CREATE DATABASE `DiaryDB` /*!40100 DEFAULT CHARACTER SET utf8mb4
     COLLATE utf8mb4_0900_ai_ci */;
 -- set privileges for db admin
-GRANT all privileges ON contactDB.* TO 'adminContactDB'@'localhost';
+GRANT all privileges ON DiaryDB.* TO 'admin1'@'localhost';
 
 -- set default db
-use contactdb;
+use DiaryDB;
 
 --
 -- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `customer`;
+DROP TABLE IF EXISTS `eintrag`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 
@@ -42,13 +42,14 @@ DROP TABLE IF EXISTS `customer`;
     description 500 Zeichen, nicht null
     phone 20 Zeichen, nicht null
 */
-CREATE TABLE `customer` (
+CREATE TABLE `eintrag` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `email` varchar(25) NOT NULL,
-  `firstName` varchar(50)  NOT NULL,
-  `lastName` varchar(50) NOT NULL,
-  `description` varchar(500) NOT NULL,
+  `titel` varchar(50)  NOT NULL,
+  `text` varchar(1000) NOT NULL,
+  `autor` varchar(50)  NOT NULL,
+  `email` varchar(50) NOT NULL,
   `phone` varchar(20) NOT NULL,
+  `datum` DATE NOT NULL,
   `registered` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
