@@ -1,6 +1,6 @@
 module.exports = {
   HOST: "localhost",
-  USER: "adminContactDB",
+  USER: "admin1",
   PASSWORD: "hello",
-  DB: "contactdb"
+  DB: "diarydb"
 };

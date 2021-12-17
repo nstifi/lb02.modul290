@@ -974,7 +974,6 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <user id="279" parent="1" name="admin1">
       <Host>localhost</Host>
-      <Plugin>caching_sha2_password</Plugin>
     </user>
     <user id="280" parent="1" name="mysql.infoschema">
       <Host>localhost</Host>
@@ -992,7 +991,9 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="284" parent="274" name="eintrag"/>
+    <table id="284" parent="274" name="eintrag">
+      <Collation>utf8_general_ci</Collation>
+    </table>
     <column id="285" parent="284" name="id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
@@ -1001,25 +1002,40 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </column>
     <column id="286" parent="284" name="titel">
       <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="287" parent="284" name="text">
+    <column id="287" parent="284" name="description">
       <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="288" parent="284" name="autor">
-      <DataType>varchar(100)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="289" parent="284" name="email">
-      <DataType>varchar(100)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="290" parent="284" name="datum">
-      <DataType>date|0s</DataType>
+    <column id="290" parent="284" name="phone">
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <key id="291" parent="284" name="PRIMARY">
+    <column id="291" parent="284" name="datum">
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="292" parent="284" name="registered">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <key id="293" parent="284" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>

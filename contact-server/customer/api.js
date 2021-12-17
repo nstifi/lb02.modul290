@@ -2,10 +2,10 @@ const customer = require("./controller.js");
 module.exports = app => {
   const customer = require("./controller.js");
 
-  // Create a new Customer
+  // Create a new Customer (SQL-Insert)
   app.post("/customer", customer.create);
 
-  // Retrieve all Customers
+  // Retrieve all Customers (SQL-Select)
   app.get("/customers", customer.findAll);
 
   //Aufgabe: REST-API, um EINEN Kunden anhand der ID auszugeben
@@ -14,7 +14,7 @@ module.exports = app => {
   
   //--End
 
-  // Update a Customer with customerId
+  // Update a Customer with customerId (SQL-Update)
   app.put("/customer/:id", customer.update);
 
 
