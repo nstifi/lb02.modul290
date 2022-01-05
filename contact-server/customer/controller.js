@@ -17,8 +17,12 @@ function create(req, res) {
   //Aufgabe: lastName, subject, description, phone hinzufügen
   //--Begin
   let data = {
+    "titel": req.body.titel,
+    "description": req.body.description,
+    "autor": req.body.autor,
     "email": req.body.email,
-    "firstName": req.body.firstName,
+    "phone": req.body.phone,
+    "datum": (new Date()),
     "registered": (new Date())
   }
   //--End
@@ -117,6 +121,8 @@ function removeAll(req, res){
 module.exports = {
   create,
   findAll,
-  update
+  update,
+  remove,
+  removeAll
 }
 //--End
