@@ -7,51 +7,69 @@
     <link rel="stylesheet" href="style/input-form.css" />
     <title>Contact form</title>
   </head>
-  <body>
-    <div class="container">
-      <form id="form" class="form">
-        <h2>Please register</h2>
-        <div class="form-control">
-          <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Enter email" />
-          <small>Error message</small>
-        </div>
-        <div class="form-control">
-          <label for="firstName">Firstname</label>
-          <input type="text" id="firstName" placeholder="Enter your firstname" />
-          <small>Error message</small>
-        </div>
-        <!-- Aufgabe: Fügen Sie folgende Input-Elemente hinzu:
-          lastName, subject, description (textarea), phone
-        -->
-        <!-- Begin -->
-        <div class="form-control">
-          <label for="lastName">Lastname</label>
-          <input type="text" id="lastName" placeholder="Enter your lastname" />
-          <small>Error message</small>
-        </div>
-        <div class="form-control">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" placeholder="Enter your subject" />
-          <small>Error message</small>
-        </div>
-        <div class="form-control">
-          <label for="description">Description</label>
-          <textarea type="text" id="description" placeholder="Enter a description"> </textarea>
-          <small>Error message</small>
-        </div>
-        <div class="form-control">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" placeholder="Enter your phone" />
-          <small>Error message</small>
-        </div>
-        <!-- Ende -->
-        <button type="submit">Submit</button>
-      </form>
-    </div>
 
-    <script src="script/validate-inputs.js"></script>
-    <script src="script/network.js"></script>
-    <script src="script/ui.js"></script>
+
+
+  <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a class="active" href="index.html">New Entry</a></li>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <div class="container">
+    <form id="form" class="form">
+      <h2>Please register</h2>
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter email" />
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="firstName">Firstname</label>
+        <input type="text" id="firstName" placeholder="Enter your firstname" />
+        <small>Error message</small>
+      </div>
+      <!-- Aufgabe: Fügen Sie folgende Input-Elemente hinzu:
+        lastName, subject, description (textarea), phone
+      -->
+      <!-- Begin -->
+      <div class="form-control">
+        <label for="lastName">Lastname</label>
+        <input type="text" id="lastName" placeholder="Enter your lastname" />
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Enter your subject" />
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="description">Description</label>
+        <textarea type="text" id="description" placeholder="Enter a description"> </textarea>
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="Enter your phone" />
+        <small>Error message</small>
+      </div>
+      <!-- Ende -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script/validate-inputs.js"></script>
+  <script src="script/network.js"></script>
+  <script src="script/ui.js"></script>
   </body>
 </html>
