@@ -50,7 +50,8 @@ module.exports = class Customer {
             }
 
             // not found Customer with the id
-            //??
+            console.log("selected customer: ", {id: id, ...customer});
+            cbResult(null, {id: id, ...customer});
         });
     };
     //--End
@@ -117,7 +118,7 @@ module.exports = class Customer {
     //Aufgabe: Einzelnen Kunden anhand der ID löschen
     //--Begin
     remove(id, cbResult) {
-        sql.query("--??", id, (err, result) => {
+        sql.query('DELETE FROM customer WHERE id = ?', id, (err, result) => {
             if (err) {
                 console.log("error: ", err);
                 //err zurückgeben, data = null
@@ -144,7 +145,7 @@ module.exports = class Customer {
     //Aufgabe: Alle Kunden löschen
     //--Begin
     removeAll(cbResult) {
-        sql.query("--??", (err, result) => {
+        sql.query('DELETE FROM customer', (err, result) => {
             if (err) {
                 console.log("error: ", err);
                 //err zurückgeben, data = null
@@ -153,7 +154,7 @@ module.exports = class Customer {
             }
 
             console.log(`deleted ${result.affectedRows} customer`);
-            //??
+            cbResult(null, result);
         });
     }
 }
