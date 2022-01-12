@@ -42,7 +42,7 @@ DROP TABLE IF EXISTS `eintrag`;
     description 500 Zeichen, nicht null
     phone 20 Zeichen, nicht null
 */
-CREATE TABLE `eintrag` (
+CREATE TABLE `customer` (
   `id` int NOT NULL AUTO_INCREMENT,
   `titel` varchar(50)  NOT NULL,
   `description` varchar(1000) NOT NULL,
