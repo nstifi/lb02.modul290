@@ -64,7 +64,14 @@ function findAll(req, res){
 //Aufgabe: Lese einen einzelnen Kunden anhand der ID aus
 //--Begin
 function findOne(req, res){
-
+  customerObj.findById((err, result) => {
+    if (err)
+      res.status(HTTP_STATUS.SERVER_ERROR).send({
+        message:
+            err.message || "Some error occurred while retrieving customers."
+      });
+    else res.send(result);
+  });
 }
 //--End
 

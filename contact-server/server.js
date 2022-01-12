@@ -28,10 +28,19 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 // test route
 app.get("/welcome", (req, res) => {
   res.json({ message: "Welcome to ContactDB!" });
 });
+
+/****
+ * //route
+ * app.get('/', function(req,res) => {
+ *   res.sendfile({'../contact-client/index.html'});
+ * });
+ */
+
 
 // add customer routes
 require("./customer/api.js")(app);

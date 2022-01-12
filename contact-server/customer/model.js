@@ -33,11 +33,13 @@ module.exports = class Customer {
     //Aufgabe: Lese einen einzelnen Kunden anhand der ID aus
     //--Begin
     findById(id, cbResult) {
-        sql.query(`--??`, id, (err, result) => {
+        let queryString = 'SELECT * FROM customer WHERE id = ?';
+        sql.query(queryString, id, (err, result) => {
             if (err) {
-                //??
-                //??
-                //??
+                console.log("error: ", err);
+                //err zurückgeben, data = null
+                cbResult(err, null);
+                return;
             }
 
             //result of the select (greater than 0) has found a record (Tupel)
