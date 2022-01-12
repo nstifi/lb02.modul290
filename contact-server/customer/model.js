@@ -146,9 +146,10 @@ module.exports = class Customer {
     removeAll(cbResult) {
         sql.query("--??", (err, result) => {
             if (err) {
-                //??
-                //??
-                //??
+                console.log("error: ", err);
+                //err zurückgeben, data = null
+                cbResult(err, null);
+                return;
             }
 
             console.log(`deleted ${result.affectedRows} customer`);
