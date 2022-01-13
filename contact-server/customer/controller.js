@@ -107,14 +107,28 @@ function update(req, res){
 //Aufgabe: Einzelnen Kunden anhand der ID löschen
 //--Begin
 function remove(req,res){
-
+  customerObj.remove((err, result) => {
+    if (err)
+      res.status(HTTP_STATUS.SERVER_ERROR).send({
+        message:
+            err.message || "Some error occurred while deleting customer."
+      });
+    else res.send(result);
+  });
 }
 //--End
 
 //Aufgabe: Alle Kunden löschen
 //--Begin
 function removeAll(req, res){
-
+  customerObj.removeAll((err, result) => {
+    if (err)
+      res.status(HTTP_STATUS.SERVER_ERROR).send({
+        message:
+            err.message || "Some error occurred while deleting customers."
+      });
+    else res.send(result);
+  });
 }
 //--End
 
