@@ -34,12 +34,6 @@ app.get("/welcome", (req, res) => {
   res.json({ message: "Welcome to ContactDB!" });
 });
 
-/****
- * //route
- * app.get('/', function(req,res) => {
- *   res.sendfile({'../contact-client/index.html'});
- * });
- */
 
 
 // add customer routes
