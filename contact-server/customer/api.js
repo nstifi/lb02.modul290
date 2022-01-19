@@ -11,7 +11,7 @@ module.exports = app => {
   //Aufgabe: REST-API, um EINEN Kunden anhand der ID auszugeben
   //--Begin
   // Retrieve a single Customer with login id
-  //app.get("/customer/:id", customer.findOne); // ?? weiss nicht ob es stimmt ?? //
+  app.get("/customer/:id", customer.findById);
   //--End
 
   // Update a Customer with customerId (SQL-Update)
@@ -21,14 +21,14 @@ module.exports = app => {
   //Aufgabe: REST-API, um EINEN Kunden anhand der ID zu löschen
   //--Begin
   // Delete a Customer with customerId
-  //app.delete("/customer/:id", customer.remove); // ?? weiss nicht ob es stimmt ?? //
+  app.delete("/customer/:id", customer.removeById);
   //--End
 
 
   //Aufgabe: REST-API, um alle Kunden zu löschen
   //--Begin
   // delete all customers
-  //app.delete("/customers", customer.removeAll);  // ?? weiss nicht ob es stimmt ?? //
+  app.delete("/customers", customer.removeAll);
   //--End
 
 };

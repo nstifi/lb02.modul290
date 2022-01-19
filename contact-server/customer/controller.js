@@ -63,7 +63,7 @@ function findAll(req, res){
 
 //Aufgabe: Lese einen einzelnen Kunden anhand der ID aus
 //--Begin
-function findOne(req, res){
+function findById(req, res){
   customerObj.findById((err, result) => {
     if (err)
       res.status(HTTP_STATUS.SERVER_ERROR).send({
@@ -106,8 +106,8 @@ function update(req, res){
 
 //Aufgabe: Einzelnen Kunden anhand der ID löschen
 //--Begin
-function remove(req,res){
-  customerObj.remove((err, result) => {
+function removeById(req,res){
+  customerObj.removeById((err, result) => {
     if (err)
       res.status(HTTP_STATUS.SERVER_ERROR).send({
         message:
@@ -142,8 +142,9 @@ function removeAll(req, res){
 module.exports = {
   create,
   findAll,
+  findById,
   update,
-  remove,
+  removeById,
   removeAll
 }
 //--End

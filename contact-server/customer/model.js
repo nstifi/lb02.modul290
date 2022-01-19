@@ -117,7 +117,7 @@ module.exports = class Customer {
      */
     //Aufgabe: Einzelnen Kunden anhand der ID löschen
     //--Begin
-    remove(id, cbResult) {
+    removeById(id, cbResult) {
         sql.query('DELETE FROM customer WHERE id = ?', id, (err, result) => {
             if (err) {
                 console.log("error: ", err);
