@@ -83,24 +83,13 @@ function checkLength(input, min, max) {
     im Internet nach "javascript regular expression for mobile number".
 */
 //--Begin
-function checkPhone(id, input) {
-  //Default: is valid
-  let result = {
-    isNotValid: false,
-    msg: showSuccess(id)
-  }
-  const re = /^\+?([0-9]{2})\)?[-. ]?([0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  if (!re.test(input.trim())) {
-    result = {
-      isNotValid: true,
-      msg: showError(id, 'Mobile is not valid')
-    }
+function checkPhone(input) {
+  const re = /^(?:(?:|0{1,2}|\+{0,2})41(?:|\(0\))|0)([1-9]\d)(\d{3})(\d{2})(\d{2})$/;
+  if (re.test(input.value.trim())) {
+    showSuccess(input);
   } else {
-    showError(input,
-        `${getFieldName(input)} isn't valid`
-    );
+    showError(input, 'Phonenumber is not valid');
     ALL_INPUT_VALID = false;
-    return result;
   }
 }
 
