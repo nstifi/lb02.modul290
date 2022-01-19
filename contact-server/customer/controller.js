@@ -14,7 +14,7 @@ function create(req, res) {
   }
 
   //Parse data out from request body
-  //Aufgabe: lastName, subject, description, phone hinzufügen
+  //Aufgabe: autor, titel, description, phone hinzufügen
   //--Begin
   let data = {
     "titel": req.body.titel,

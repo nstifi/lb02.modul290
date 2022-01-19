@@ -85,11 +85,11 @@ module.exports = class Customer {
     updateById(id, customer, cbResult) {
         //Aufgabe: Update der Attribute lastName, subject, description, phone
         //--Begin
-        let queryString = 'UPDATE customer SET email = ?, firstName = ?';
+        let queryString = 'UPDATE customer SET email = ?, autor = ?';
         queryString += ' WHERE id = ?';
         //--End
         sql.query(queryString,
-            [customer.email, customer.firstName, parseInt(id)],
+            [customer.email, customer.autor, parseInt(id)],
             (err, result) => {
                 if (err){
                     console.log("error: ", err);
