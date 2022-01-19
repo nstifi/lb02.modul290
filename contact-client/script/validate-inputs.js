@@ -4,14 +4,13 @@ let ALL_INPUT_VALID;
 //reading fields from input form
 const form = document.getElementById('form');
 const email = document.getElementById('email');
-const firstName = document.getElementById('firstName');
 
 /* Aufgabe: Lesen Sie folgende Input-Elemente aus:
-  lastName, subject, description (textarea), phone
+  lastName, titel, description (textarea), phone
 */
 //--Begin
-const lastName = document.getElementById('lastName');
-const subject = document.getElementById('subject');
+const autor = document.getElementById('autor');
+const titel = document.getElementById('titel');
 const description = document.getElementById('description');
 const phone = document.getElementById('phone');
 //--End
@@ -111,11 +110,10 @@ function getFieldName(input) {
 */
 //--Begin
 function validateForm(){
-  if(!checkRequired([email, firstName, lastName, subject, phone])){
-    checkLength(firstName, 3, 20);
+  if(!checkRequired([email, autor, titel, phone])){
+    checkLength(autor, 3, 50);
     checkEmail(email);
-    checkLength(lastName, 3, 20);
-    checkLength(subject, 5, 50);
+    checkLength(titel, 5, 50);
     checkPhone(phone);
   }
 }
@@ -156,9 +154,8 @@ form.addEventListener('submit', function(e) {
     //--Begin
     let formData = {
         email: email.value,
-        firstName: firstName.value,
-        lastName: lastName.value,
-        subject: subject.value,
+        autor: autor.value,
+        titel: titel.value,
         description: description.value,
         phone: phone.value
       }
