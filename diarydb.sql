@@ -28,6 +28,8 @@ GRANT all privileges ON DiaryDB.* TO 'admin1'@'localhost';
 -- set default db
 use DiaryDB;
 
+SHOW GRANTS FOR 'admin1'@'localhost';
+
 --
 -- Table structure for table `user`
 --
